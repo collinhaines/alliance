@@ -20,9 +20,7 @@ module.exports = function (grunt) {
     jshint: {
       files: ['Gruntfile.js', 'client/js/*.js'],
       options: {
-        globals: {
-          jQuery: true
-        }
+        jshintrc: 'client/js/.jshintrc'
       }
     },
     lesslint: {
