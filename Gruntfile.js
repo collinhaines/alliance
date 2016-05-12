@@ -53,7 +53,7 @@ module.exports = function (grunt) {
         logConcurrentOutput: true
       },
       dev: {
-        tasks: ['watch:LESS', 'watch:JavaScript']
+        tasks: ['watch:LESS', 'watch:JavaScript', 'exec:meteor-start']
       }
     },
 
@@ -66,6 +66,12 @@ module.exports = function (grunt) {
         files: 'client/js/*.js',
         tasks: ['jshint']
       }
+    },
+
+    exec: {
+      'meteor-start': {
+        command: 'meteor run'
+      }
     }
   });
 
@@ -75,6 +81,7 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-exec');
 
   grunt.registerTask('lint', ['jshint', 'lesslint']);
   grunt.registerTask('dev', ['concurrent:dev']);
