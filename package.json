@@ -1,4 +1,12 @@
 {
   "name": "alliance",
   "private": true,
+  "description": "Knowledge-base of bringing two specific people together.",
+  "version": "0.0.0",
+  "author": "Collin Haines",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/collinhaines/alliance"
+  },
+  "license": "MIT"
 }
