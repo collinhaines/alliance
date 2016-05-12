@@ -11,6 +11,7 @@
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-banner": "^0.6.0",
+    "grunt-concurrent": "^2.3.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-lesslint": "^3.2.0"

@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 
     // Tasks
     jshint: {
-      files: ['Gruntfile.js', 'client/js/*.js', '!client/js/bootstrap.js'],
+      files: ['Gruntfile.js', 'client/js/*.js'],
       options: {
         globals: {
           jQuery: true
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         csslint: {
           csslintrc: 'client/less/.csslintrc'
         },
-        failOnError: false,
+        failOnError: false
       }
     },
     usebanner: {
@@ -42,16 +42,40 @@ module.exports = function (grunt) {
           banner: '<%= banner %>'
         },
         files: {
-          src: ['Gruntfile.js', 'client/js/*.js', '!client/js/bootstrap.js']
+          src: ['Gruntfile.js', 'client/js/*.js']
         }
+      }
+    },
+
+    // Watch
+    concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
+      dev: {
+        tasks: ['watch:LESS', 'watch:JavaScript']
+      }
+    },
+
+    watch: {
+      LESS: {
+        files: 'client/less/**/*.import.less',
+        tasks: ['lesslint']
+      },
+      JavaScript: {
+        files: 'client/js/*.js',
+        tasks: ['jshint']
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-lesslint');
   grunt.loadNpmTasks('grunt-banner');
 
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-concurrent');
+
   grunt.registerTask('lint', ['jshint', 'lesslint']);
+  grunt.registerTask('dev', ['concurrent:dev']);
 };
