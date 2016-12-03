@@ -27,20 +27,14 @@ module.exports = function (grunt) {
     },
 
     jshint: {
-      options: {
-        jshintrc: 'client/.jshintrc'
-      },
-
-      js: {
+      default: {
         files: {
           src: ['imports/**/*.js', '!imports/library/*.js']
-        }
-      },
+        },
 
-      self: {
-        files: {
-          src: 'Gruntfile.js'
-        }
+        options: {
+          jshintrc: 'client/.jshintrc'
+        },
       }
     },
 
