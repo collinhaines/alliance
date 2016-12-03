@@ -1,86 +1,61 @@
-/*!
- * alliance
- *
- * Copyright 2016 Collin Haines
- * Licensed under the MIT license.
+/**
+ * Gruntfile.js
+ * Copyright (c) 2016. Collin Haines.
+ * Licensed under MIT (https://github.com/collinhaines/alliance/blob/master/LICENSE)
  */
 
+'use strict';
+
 module.exports = function (grunt) {
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
-    // Metadata
-    pkg: grunt.file.readJSON('package.json'),
-    banner: '/*!\n' +
-            ' * <%= pkg.name %>\n' +
-            ' *\n' +
-            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under the <%= pkg.license %> license.\n' +
-            ' */\n',
-
-    // Tasks
-    jshint: {
-      files: ['Gruntfile.js', 'client/js/*.js'],
-      options: {
-        jshintrc: 'client/js/.jshintrc'
-      }
-    },
-    lesslint: {
-      src: ['client/less/*.less'],
-      options: {
-        imports: ['client/less/**/*.import.less'],
-        csslint: {
-          csslintrc: 'client/less/.csslintrc'
-        },
-        failOnError: false
-      }
-    },
-    usebanner: {
-      taskName: {
-        options: {
-          position: 'top',
-          banner: '<%= banner %>'
-        },
-        files: {
-          src: ['Gruntfile.js', 'client/js/*.js']
-        }
-      }
-    },
-
-    // Watch
     concurrent: {
-      options: {
-        logConcurrentOutput: true
-      },
-      dev: {
-        tasks: ['watch:LESS', 'watch:JavaScript', 'exec:meteor-start']
-      }
-    },
+      default: {
+        options: {
+          logConcurrentOutput: true
+        },
 
-    watch: {
-      LESS: {
-        files: 'client/less/**/*.import.less',
-        tasks: ['lesslint']
-      },
-      JavaScript: {
-        files: 'client/js/*.js',
-        tasks: ['jshint']
+        tasks: ['watch', 'exec']
       }
     },
 
     exec: {
-      'meteor-start': {
+      default: {
         command: 'meteor run'
+      }
+    },
+
+    jshint: {
+      options: {
+        jshintrc: 'client/.jshintrc'
+      },
+
+      js: {
+        files: {
+          src: ['imports/**/*.js', '!imports/library/*.js']
+        }
+      },
+
+      self: {
+        files: {
+          src: 'Gruntfile.js'
+        }
+      }
+    },
+
+    watch: {
+      default: {
+        files: ['imports/**/*.js', '!imports/library/*.js'],
+        tasks: ['jshint']
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-lesslint');
-  grunt.loadNpmTasks('grunt-banner');
+  grunt.registerTask('lint', [
+    'jshint',
+    'lesslint'
+  ]);
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-concurrent');
-  grunt.loadNpmTasks('grunt-exec');
-
-  grunt.registerTask('lint', ['jshint', 'lesslint']);
-  grunt.registerTask('dev', ['concurrent:dev']);
+  grunt.registerTask('dev', 'concurrent');
 };
