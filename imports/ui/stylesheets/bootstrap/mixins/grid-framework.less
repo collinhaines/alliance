@@ -69,11 +69,7 @@
   }
 }
 .calc-grid-column(@index, @class, @type) when (@type = offset) {
-  .col-@{class}-offset-@{index} when (percentage((@index / @grid-columns)) = 0) {
-    margin-left: 0;
-  }
-
-  .col-@{class}-offset-@{index} when (percentage((@index / @grid-columns)) < 0) {
+  .col-@{class}-offset-@{index} {
     margin-left: percentage((@index / @grid-columns));
   }
 }

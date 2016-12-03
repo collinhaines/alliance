@@ -230,7 +230,6 @@
 // the nav the full height of the horizontal nav (above 768px).
 
 .navbar-nav {
-  display: inline-block;
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
   > li > a {
@@ -265,6 +264,7 @@
 
   // Uncollapse the nav
   @media (min-width: @grid-float-breakpoint) {
+    float: left;
     margin: 0;
 
     > li {
