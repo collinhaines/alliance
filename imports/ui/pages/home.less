@@ -1,0 +1,90 @@
+//
+// Home
+// ------------------------------
+
+@font-face {
+  font-family: "Balqis";
+  src: url("/fonts/Balqis.otf") format("opentype"),
+       url("/fonts/Balqis.ttf") format("truetype");
+}
+
+.countdown {
+  padding-top: 250px;
+  padding-bottom: 250px;
+
+  color: #fff;
+
+  background-size: cover;
+  background-image: url("/img/flower-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .countdown-background {
+    padding-bottom: @line-height-computed;
+
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+
+  .countdown-header {
+    color: #fff;
+    font-size: 95px;
+    font-family: "Balqis";
+
+    @media (max-width: 667px) {
+      font-size: 90px;
+    }
+  }
+
+  .countdown-date {
+    margin-bottom: @line-height-computed;
+
+    color: #fff;
+    font-size: 40px;
+  }
+
+  // Name:     jQuery Countdown styles 2.0.0
+  // Author:   Keith Wood
+  // Modified: Collin Haines
+  .countdown-row {
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
+  .countdown-show1 .countdown-section {
+    width: percentage(1 / 1);
+  }
+  .countdown-show2 .countdown-section {
+    width: percentage(1 / 2);
+  }
+  .countdown-show3 .countdown-section {
+    width: percentage(1 / 3);
+  }
+  .countdown-show4 .countdown-section {
+    width: percentage(1 / 4);
+  }
+  .countdown-show5 .countdown-section {
+    width: percentage(1 / 5);
+  }
+  .countdown-show6 .countdown-section {
+    width: percentage(1 / 6);
+  }
+  .countdown-show7 .countdown-section {
+    width: percentage(1 / 7);
+  }
+  .countdown-section {
+    display: block;
+    float: left;
+
+    text-align: center;
+  }
+  .countdown-amount {
+    font-size: 200%;
+  }
+  .countdown-period {
+    display: block;
+  }
+  .countdown-descr {
+    display: block;
+    width: 100%;
+  }
+}
