@@ -21,11 +21,11 @@
     <div class="cd-container" id="cd-timeline">
       {{#each item in timeline}}
         <div class="cd-timeline-block">
-          <div class="cd-timeline-img">
+          <div class="cd-timeline-img is-hidden">
             <i class="fa fa-2x fa-heart-o"></i>
           </div>
 
-          <div class="cd-timeline-content">
+          <div class="cd-timeline-content is-hidden">
             <h3>{{item.title}}</h3>
 
             <img src="/img/{{item.image}}" class="img-responsive" alt="{{item.title}}">
