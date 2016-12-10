@@ -92,3 +92,50 @@
 .timeline {
   background-color: @alliance-blue;
 }
+
+.registry {
+  padding-top: 125px;
+  padding-bottom: 75px;
+
+  .registry-item {
+    &:not(:first-child) {
+      .registry-image {
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+    }
+
+    @media (max-width: @screen-sm-min) {
+      &:last-child {
+        left: 25%;
+      }
+    }
+
+    @media (min-width: @screen-md-min) {
+      &:not(:first-child) {
+        margin-left: percentage(1.5 / 12);
+      }
+    }
+  }
+
+  .registry-image {
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    opacity: 0.5;
+
+    &.is-hover {
+      opacity: 1;
+    }
+  }
+
+  .registry-header {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .registry-category {
+    margin-bottom: 15px;
+  }
+}

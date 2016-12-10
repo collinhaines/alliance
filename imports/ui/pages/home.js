@@ -26,6 +26,27 @@ Template.home.helpers({
 
   renderDate(timestamp) {
     return new Date(timestamp).toDateString().substr(4);
+  },
+
+  registries() {
+    return [
+      {
+        "link": "http://www.target.com/gift-registry/giftgiver?registryId=xvwq0lbiB-4Plgy8dlIELw",
+        "image": "target-logo.png",
+        "brand": "Target",
+        "category": "Kitchen, Dining, Living"
+      }, {
+        "link": "https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?eventType=Wedding&inventoryCallEnabled=true&registryId=543758362",
+        "image": "bed-bath-and-beyond-logo.png",
+        "brand": "Bed Bath & Beyond",
+        "category": "Bedroom, Bathroom, Furniture"
+      }, {
+        "link": "https://www.amazon.com/wedding/collin-haines-chelsea-coleburn-columbia-june-2017/registry/10EMNQK4IZLM6",
+        "image": "amazon-logo.png",
+        "brand": "Amazon",
+        "category": "Electronics, Games, Other"
+      }
+    ];
   }
 });
 
@@ -60,5 +81,15 @@ Template.home.onRendered(function () {
         $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
       }
     });
+  }
+});
+
+Template.home.events({
+  'mouseover .registry .btn'(event) {
+    $(event.target).parent().find('img').addClass('is-hover');
+  },
+
+  'mouseout .registry .btn'(event) {
+    $(event.target).parent().find('img').removeClass('is-hover');
   }
 });
