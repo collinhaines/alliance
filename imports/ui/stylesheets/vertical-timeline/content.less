@@ -1,0 +1,111 @@
+//
+// Content
+// ------------------------------
+
+.cd-timeline-content {
+  position: relative;
+
+  padding: 1em;
+  margin-left: 60px;
+
+  background: white;
+  box-shadow: 0 3px 0 #d7e4ed;
+  border-radius: 0.25em;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 16px;
+    right: 100%;
+
+    width: 0;
+    height: 0;
+
+    border: 7px solid transparent;
+    border-right: 7px solid white;
+  }
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  h2 {
+    color: #303e49;
+  }
+
+  p,
+  .cd-date,
+  .cd-read-more {
+    font-size: 13px;
+  }
+
+  .cd-date,
+  .cd-read-more {
+    display: inline-block;
+  }
+
+  p {
+    margin: 1em 0;
+    line-height: 1.6;
+  }
+
+  .cd-read-more {
+    float: right;
+    padding: .8em 1em;
+
+    color: white;
+
+    background: #acb7c0;
+    border-radius: 0.25em;
+  }
+
+  .cd-date {
+    float: left;
+    padding: .8em 0;
+    opacity: 0.7;
+  }
+
+  @media only screen and (min-width: 1170px) {
+    padding: 1.6em;
+    margin-left: 0;
+
+    width: 45%;
+
+    &::before {
+      top: 24px;
+      left: 100%;
+      border-color: transparent;
+      border-left-color: white;
+    }
+
+    .cd-read-more {
+      float: left;
+    }
+
+    .cd-date {
+      position: absolute;
+      width: 100%;
+      left: 122%;
+      top: 6px;
+      font-size: 16px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    p {
+      font-size: 16px;
+    }
+
+    .cd-date,
+    .cd-read-more {
+      font-size: 14px;
+    }
+  }
+}
+
+.no-touch .cd-timeline-content .cd-read-more:hover {
+  background-color: #bac4cb;
+}

@@ -1,0 +1,54 @@
+//
+// Block
+// ------------------------------
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+
+  .clearfix();
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media only screen and (min-width: 1170px) {
+    margin: 4em 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(even) .cd-timeline-content {
+      float: right;
+
+      &::before {
+        top: 24px;
+        left: auto;
+        right: 100%;
+
+        border-color: transparent;
+        border-right-color: white;
+      }
+
+      .cd-date {
+        left: auto;
+        right: 122%;
+
+        text-align: right;
+      }
+
+      .cd-read-more {
+        float: right;
+      }
+    }
+  }
+}

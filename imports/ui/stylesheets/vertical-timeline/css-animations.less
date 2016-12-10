@@ -1,0 +1,31 @@
+//
+// CSS Animations
+// ------------------------------
+
+.cssanimations {
+  @media only screen and (min-width: 1170px) {
+    .cd-timeline-img,
+    .cd-timeline-content {
+      &.is-hidden {
+        visibility: hidden;
+      }
+
+      &.bounce-in {
+        visibility: visible;
+      }
+    }
+
+    .cd-timeline-img.bounce-in {
+      .animation(cd-bounce-1 0.6s);
+    }
+
+    .cd-timeline-content.bounce-in {
+      .animation(cd-bounce-2 0.6s);
+    }
+
+    // Inverse bounce effect on even content blocks.
+    .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+      .animation(cd-bounce-2-inverse 0.6s);
+    }
+  }
+}

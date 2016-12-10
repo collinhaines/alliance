@@ -1,0 +1,53 @@
+//
+// Keyframes
+// ------------------------------
+
+.keyframes(@name, @frames) {
+  @-webkit-keyframes @name { @frames(); }
+  @-moz-keyframes    @name { @frames(); }
+  @keyframes         @name { @frames(); }
+}
+
+.keyframes(cd-bounce-1, {
+  0% {
+    opacity: 0;
+    .scale(0.5);
+  }
+
+  60% {
+    opacity: 1;
+    .scale(1.2);
+  }
+
+  100% {
+    .scale(1);
+  }
+});
+
+.keyframes(cd-bounce-2, {
+  0% {
+    opacity: 0;
+    .translate(-100px, 0);
+  }
+  60% {
+    opacity: 1;
+    .translate(20px, 0);
+  }
+  100% {
+    .translate(0, 0);
+  }
+});
+
+.keyframes(cd-bounce-2-inverse, {
+  0% {
+    opacity: 0;
+    .translate(100px, 0);
+  }
+  60% {
+    opacity: 1;
+   .translate(-20px, 0);
+  }
+  100% {
+    .translate(0, 0);
+  }
+});

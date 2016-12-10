@@ -1,0 +1,18 @@
+//
+// Container
+// ------------------------------
+
+// This class is used to give a max-width to the element it is
+// applied to, and center it horizontally when it reaches max-width.
+.cd-container {
+  width: 90%;
+  max-width: 1170px;
+
+  margin: 0 auto;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

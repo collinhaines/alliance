@@ -1,14 +1,73 @@
 import './home.html';
 
 import { Template } from 'meteor/templating';
+import { Tracker } from 'meteor/tracker';
 import { $ } from 'meteor/jquery';
+
+import { Timeline } from '/imports/api/timeline.js';
 
 import '/imports/library/jquery-plugin.js';
 import '/imports/library/countdown.js';
 
+Template.home.onCreated(function () {
+  Tracker.autorun(() => {
+    this.subscribe('timeline');
+  });
+});
+
+Template.home.helpers({
+  timeline() {
+    return Timeline.find({}, {
+      sort: {
+        date: 1
+      }
+    });
+  },
+
+  renderDate(timestamp) {
+    return new Date(timestamp).toDateString().substr(4);
+  }
+});
+
 Template.home.onRendered(function () {
+  /*
+   * Deal with the countdown plugin.
+   */
   $('#countdown').countdown({
-    until:  new Date('2017-06-17T17:00:00-05:00'),
+    until:  new Date('2017-06-17T17:00:00-03:00'),
     format: 'yowdHMS'
   });
+
+  /*
+   * Deal with the timeline plugin.
+   */
+  setTimeout(function () {
+    // Hide timeline blocks which are outside the viewport.
+    $('.cd-timeline-block').each(function () {
+      if ($(this).offset().top > $(window).scrollTop() + $(window).height() * 0.8) {
+        $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+      }
+    });
+
+    // On scrolling, show/animate timeline blocks when enter the viewport.
+    $(window).on('scroll', function () {
+      if (!window.requestAnimationFrame) {
+        setTimeout(function () {
+          showBlocks();
+        }, 100);
+      } else {
+        window.requestAnimationFrame(function () {
+          showBlocks();
+        });
+      }
+    });
+
+    function showBlocks() {
+      $('.cd-timeline-block').each(function () {
+        if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.8 && $(this).find('.cd-timeline-img').hasClass('is-hidden')) {
+          $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+        }
+      });
+    }
+  }, 500);
 });
