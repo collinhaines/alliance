@@ -83,13 +83,3 @@ Template.home.onRendered(function () {
     });
   }
 });
-
-Template.home.events({
-  'mouseover .registry .btn'(event) {
-    $(event.target).parent().find('img').addClass('is-hover');
-  },
-
-  'mouseout .registry .btn'(event) {
-    $(event.target).parent().find('img').removeClass('is-hover');
-  }
-});
