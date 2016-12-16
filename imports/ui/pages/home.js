@@ -51,6 +51,11 @@ Template.home.helpers({
 });
 
 Template.home.onRendered(function () {
+  // Hide the .cssanimations-alert
+  if (Modernizr.cssanimations) {
+    $('.cssanimations-alert').hide();
+  }
+
   /*
    * Deal with the countdown plugin.
    */
