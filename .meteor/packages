@@ -21,3 +21,4 @@ shell-server@0.2.1           # Server-side component of the `meteor shell` comma
 
 kadira:blaze-layout          # Layout Manager for Blaze (works well with FlowRouter)
 kadira:flow-router           # Carefully Designed Client Side Router for Meteor
+dburles:google-maps          # Google Maps Javascript API v3
