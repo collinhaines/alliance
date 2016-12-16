@@ -1,0 +1,81 @@
+<template name="honeymoon">
+  <section class="splash honeymoon">
+    <div class="splash-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 center-block text-center">
+            <h1 class="splash-header">Chelsea and Collin's</h1>
+
+            <h2 class="splash-sub-header">Irish Honeymoon</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="honeymoon-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 center-block">
+          <p class="honeymoon-details-text text-justify">Chelsea and Collin plan to celebrate their new marriage in Ireland &mdash; where strange tales begin and happy endings are possible. The trip will be Monday, June 19 to Sunday, June 25 and is jammed packed with places to explore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="honeymoon-itinerary">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h2 class="honeymoon-itinerary-header">Tentative Itinerary</h2>
+        </div>
+      </div>
+
+      {{#each item in itinerary}}
+        <div class="row itinerary-row">
+          <div class="col-sm-6 itinerary-row-information">
+            <p>
+              <strong>{{{item.note}}}</strong>
+            </p>
+
+            <p>
+              <em>{{item.date}}</em>
+            </p>
+          </div>
+
+          <div class="col-sm-6 itinerary-row-description">
+            {{#if item.list}}
+              <ul class="list-unstyled">
+                {{#each entry in item.list}}
+                  <li>{{{entry}}}</li>
+                {{/each}}
+              </ul>
+            {{/if}}
+
+            {{#if item.description}}
+              <p class="text-justify">{{{item.description}}}</p>
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="honeymoon-map">
+    {{> googleMap name="honeymoon" options=options}}
+  </section>
+
+  <section class="honeymoon-note">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 center-block">
+          <p class="honeymoon-note-text text-justify">We ask our friends, family, and any other loved ones that, if you want to give us something special for our wedding, a donation to our honeymoon adventure would be most appreciated. All donations will go towards plane tickets, Airbnb, day tours, and meals.</p>
+
+          <p class="text-center">
+            <a href="https://www.gofundme.com/chelsea-collins-irish-honeymoon" class="btn btn-pink">Donate</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

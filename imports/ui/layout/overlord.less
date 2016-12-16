@@ -35,13 +35,25 @@
     background-color: rgba(0, 0, 0, 0.45);
   }
 
-  .splash-header {
+  .splash-header,
+  .splash-sub-header {
     color: #fff;
-    font-size: 95px;
     font-family: "Balqis";
+  }
+
+  .splash-header {
+    font-size: 95px;
 
     @media (max-width: 667px) {
       font-size: 90px;
+    }
+  }
+
+  .splash-sub-header {
+    font-size: 75px;
+
+    @media (max-width: 667px) {
+      font-size: 70px;
     }
   }
 }
