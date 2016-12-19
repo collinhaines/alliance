@@ -4,6 +4,7 @@ import { Template } from 'meteor/templating';
 import { $ } from 'meteor/jquery';
 
 Template.honeymoon.onCreated(function () {
+  // Static coordinates of each visiting location in Ireland.
   const coordinates = [
     {
       title:    'Dublin',
@@ -44,12 +45,14 @@ Template.honeymoon.onCreated(function () {
     }
   ];
 
+  // Create a callback once the Google Maps is done initializing.
   GoogleMaps.ready('honeymoon', function (map) {
     console.info('Google Maps is ready.');
-
     console.info('Installing ' + coordinates.length + ' markers.');
 
+    // Loop through each coordinate.
     for (let i = 0; i < coordinates.length; i++) {
+      // Create a map marker.
       new google.maps.Marker({
         map:      map.instance,
         title:    coordinates[i].title,
@@ -134,7 +137,7 @@ Template.honeymoon.onRendered(function () {
     $(this).find('> div').height(height);
   });
 
-  /**
+  /*
    * Load Google Maps.
    */
   GoogleMaps.load({
