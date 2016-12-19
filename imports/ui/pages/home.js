@@ -88,3 +88,7 @@ Template.home.onRendered(function () {
     });
   }
 });
+
+Template.home.onDestroyed(function () {
+  $(window).off('scroll');
+});
