@@ -1,7 +1,7 @@
 # Alliance
 Knowledge-base of bringing two specific people together.
 
-## Credits
+## Credits and Acknowledgments
 - Bootswatch:
   - [Paper Theme](https://bootswatch.com/paper/)
   - [Yeti Theme](https://bootswatch.com/yeti/)

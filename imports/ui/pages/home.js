@@ -31,20 +31,20 @@ Template.home.helpers({
   registries() {
     return [
       {
-        "link": "http://www.target.com/gift-registry/giftgiver?registryId=xvwq0lbiB-4Plgy8dlIELw",
-        "image": "target-logo.png",
-        "brand": "Target",
-        "category": "Kitchen, Dining, Living"
+        'link': 'http://www.target.com/gift-registry/giftgiver?registryId=xvwq0lbiB-4Plgy8dlIELw',
+        'image': 'target-logo.png',
+        'brand': 'Target',
+        'category': 'Kitchen, Dining, Living'
       }, {
-        "link": "https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?eventType=Wedding&inventoryCallEnabled=true&registryId=543758362",
-        "image": "bed-bath-and-beyond-logo.png",
-        "brand": "Bed Bath & Beyond",
-        "category": "Bedroom, Bathroom, Furniture"
+        'link': 'https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?eventType=Wedding&inventoryCallEnabled=true&registryId=543758362',
+        'image': 'bed-bath-and-beyond-logo.png',
+        'brand': 'Bed Bath & Beyond',
+        'category': 'Bedroom, Bathroom, Furniture'
       }, {
-        "link": "https://www.amazon.com/wedding/collin-haines-chelsea-coleburn-columbia-june-2017/registry/10EMNQK4IZLM6",
-        "image": "amazon-logo.png",
-        "brand": "Amazon",
-        "category": "Electronics, Games, Other"
+        'link': 'https://www.amazon.com/wedding/collin-haines-chelsea-coleburn-columbia-june-2017/registry/10EMNQK4IZLM6',
+        'image': 'amazon-logo.png',
+        'brand': 'Amazon',
+        'category': 'Electronics, Games, Other'
       }
     ];
   }
@@ -77,8 +77,12 @@ Template.home.onRendered(function () {
 
   function showBlocks() {
     $('.cd-timeline-block').each(function () {
-      if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.8 && $(this).find('.cd-timeline-img').hasClass('is-hidden')) {
-        $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+      const $timelineImage = $(this).find('.cd-timeline-img');
+
+      if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.8 && $timelineImage.hasClass('is-hidden')) {
+        $(this).find('.cd-timeline-img, .cd-timeline-content')
+          .removeClass('is-hidden')
+          .addClass('bounce-in');
       }
     });
   }

@@ -46,7 +46,7 @@ Template.honeymoon.onCreated(function () {
   ];
 
   // Create a callback once the Google Maps is done initializing.
-  GoogleMaps.ready('honeymoon', function (map) {
+  GoogleMaps.ready('honeymoon', (map) => {
     console.info('Google Maps is ready.');
     console.info('Installing ' + coordinates.length + ' markers.');
 
