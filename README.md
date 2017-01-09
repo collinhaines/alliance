@@ -7,7 +7,6 @@ Knowledge-base of bringing two specific people together.
   - [Yeti Theme](https://bootswatch.com/yeti/)
 - [Countdown for jQuery](http://keith-wood.name/countdown.html)
 - [Font Awesome](https://fortawesome.io/)
-- [Mailgun](https://mailgun.com/)
 - Unsplash:
   - [Home Background](https://unsplash.com/photos/HsG4OEPqGYc)
   - [Honeymoon Background](https://unsplash.com/photos/cpDPdO_2NLU)
