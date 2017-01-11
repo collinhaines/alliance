@@ -9,6 +9,7 @@ Knowledge-base of bringing two specific people together.
 - [Font Awesome](https://fortawesome.io/)
 - [Mailgun](https://mailgun.com/)
 - Unsplash:
+  - [Details Background](https://unsplash.com/photos/Z5dKUnRJIiY)
   - [Home Background](https://unsplash.com/photos/HsG4OEPqGYc)
   - [Honeymoon Background](https://unsplash.com/photos/cpDPdO_2NLU)
 - [Vertical Timeline](https://codyhouse.co/gem/vertical-timeline/)
