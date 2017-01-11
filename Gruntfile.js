@@ -1,6 +1,6 @@
 /**
  * Gruntfile.js
- * Copyright (c) 2016. Collin Haines.
+ * Copyright (c) 2017. Collin Haines.
  * Licensed under MIT (https://github.com/collinhaines/alliance/blob/master/LICENSE)
  */
 

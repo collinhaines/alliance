@@ -1,12 +1,18 @@
 {
   "name": "alliance",
-  "private": true,
-  "description": "Knowledge-base of bringing two specific people together.",
-  "version": "0.0.0",
   "author": "Collin Haines",
+  "private": true,
+  "license": "MIT",
+  "version": "1.0.0",
+  "homepage": "https://chelseaandcollinhaines.com/",
+  "description": "Knowledge-base of bringing two specific people together.",
   "repository": {
     "type": "git",
     "url": "https://github.com/collinhaines/alliance"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "meteor-node-stubs": "^0.2.4"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -15,10 +21,5 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-exec": "^0.4.7",
     "load-grunt-tasks": "^3.5.2"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "babel-runtime": "^6.20.0",
-    "meteor-node-stubs": "^0.2.4"
   }
 }
