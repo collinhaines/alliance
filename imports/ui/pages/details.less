@@ -28,3 +28,67 @@
     border-bottom: 1px solid @alliance-pink;
   }
 }
+
+.details-map {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  &-actual {
+    height: 400px;
+
+    &-content {
+      color: #333;
+      font-family: Roboto, Arial;
+      font-weight: 400;
+
+      div {
+        width: 180px;
+      }
+
+      &-title {
+        font-size: 14;
+        font-weight: 500;
+      }
+
+      &-address {
+        margin-top: 2px;
+
+        color: #555;
+      }
+
+      &-link {
+        color: #427fed;
+      }
+    }
+  }
+
+  &-event {
+    font-style: italic;
+  }
+
+  &-address {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &-schedule {
+    padding-top: 15px;
+
+    @media screen and (min-width: @screen-md-min) {
+      padding-top: 25px;
+    }
+
+    &-date {
+      margin-bottom: 15px;
+
+      font-size: 16px;
+      text-transform: underline;
+    }
+
+    &-notice {
+      margin-top: 25px;
+
+      font-style: italic;
+    }
+  }
+}
