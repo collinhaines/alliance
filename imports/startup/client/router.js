@@ -18,3 +18,9 @@ FlowRouter.route('/honeymoon', {
     BlazeLayout.render('overlord', { main: 'honeymoon' });
   }
 });
+
+FlowRouter.route('/rsvp', {
+  action() {
+    BlazeLayout.render('overlord', { main: 'rsvp' });
+  }
+});
