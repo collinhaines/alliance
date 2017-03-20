@@ -59,6 +59,21 @@ Template.details.helpers({
         }
       };
     }
+  },
+
+  schedule() {
+    return [
+      {
+        time:  '5:00 PM',
+        title: 'Ceremony Begins'
+      }, {
+        time:  '5:30 PM',
+        title: 'Cocktail Hour'
+      }, {
+        time:  '6:30 PM',
+        title: 'Reception'
+      }
+    ];
   }
 });
 

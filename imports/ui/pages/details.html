@@ -53,9 +53,17 @@
           <div class="details-map-schedule">
             <h5 class="details-map-schedule-date">June 17, 2017</h5>
 
-            <h6>5:00 PM - Ceremony Begins</h6>
+            {{#each item in schedule}}
+              <div class="row details-map-schedule-row">
+                <div class="col-xs-6 text-right">
+                  <span>{{item.time}}</span>
+                </div>
 
-            <p class="details-map-schedule-notice text-muted">Detailed schedule to arrive once finalized.</p>
+                <div class="col-xs-6 text-left">
+                  <span>{{item.title}}</span>
+                </div>
+              </div>
+            {{/each}}
           </div>
         </div>
       </div>
