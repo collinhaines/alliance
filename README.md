@@ -8,6 +8,7 @@ Knowledge-base of bringing two specific people together.
 - [Countdown for jQuery](http://keith-wood.name/countdown.html)
 - [Font Awesome](https://fortawesome.io/)
 - Unsplash:
+  - [Details Background](https://unsplash.com/photos/Z5dKUnRJIiY)
   - [Home Background](https://unsplash.com/photos/HsG4OEPqGYc)
   - [Honeymoon Background](https://unsplash.com/photos/cpDPdO_2NLU)
   - [RSVP Background](https://unsplash.com/photos/8mqOw4DBBSg)

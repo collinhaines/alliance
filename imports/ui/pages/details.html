@@ -1,0 +1,72 @@
+<template name="details">
+  <header class="splash details">
+    <div class="splash-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 center-block text-center">
+            <h1 class="splash-header">Celebrating</h1>
+
+            <h2 class="splash-sub-header">Chelsea and Collin</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="details-parents">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 col-md-offset-2 col-sm-6">
+          <p class="details-parents-title">Parents of the Bride</p>
+
+          <h4 class="details-parents-name">Mr. Coleburn and Ms. Popelars</h4>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <p class="details-parents-title">Parents of the Groom</p>
+
+          <h4 class="details-parents-name">Mr. and Mrs. Haines</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details-map">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 details-map-actual">
+          {{> googleMap name="details" options=options}}
+        </div>
+
+        <div class="col-md-6 text-center">
+          <h3>Seibels House and Garden</h3>
+
+          <h5 class="details-map-event">Ceremony and Reception</h5>
+
+          <address class="details-map-address">
+            <div>1601 Richland Street</div>
+            <div>Columbia, SC 29201</div>
+          </address>
+
+          <hr>
+
+          <div class="details-map-schedule">
+            <h5 class="details-map-schedule-date">June 17, 2017</h5>
+
+            {{#each item in schedule}}
+              <div class="row details-map-schedule-row">
+                <div class="col-xs-6 text-right">
+                  <span>{{item.time}}</span>
+                </div>
+
+                <div class="col-xs-6 text-left">
+                  <span>{{item.title}}</span>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
