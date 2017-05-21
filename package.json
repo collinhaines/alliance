@@ -11,15 +11,15 @@
     "url": "https://github.com/collinhaines/alliance"
   },
   "dependencies": {
-    "babel-runtime": "^6.20.0",
-    "meteor-node-stubs": "^0.2.4"
+    "babel-runtime": "^6.23.0",
+    "meteor-node-stubs": "^0.2.6"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-concurrent": "^2.3.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-exec": "^0.4.7",
+    "grunt-exec": "^2.0.0",
     "load-grunt-tasks": "^3.5.2"
   }
 }
