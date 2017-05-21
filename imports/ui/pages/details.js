@@ -68,7 +68,7 @@ Template.details.helpers({
         title: 'Ceremony Begins'
       }, {
         time:  '5:30 PM',
-        title: 'Cocktail Hour'
+        title: 'Social Hour'
       }, {
         time:  '6:30 PM',
         title: 'Reception'
