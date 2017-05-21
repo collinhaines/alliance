@@ -7,33 +7,21 @@ Template.honeymoon.onCreated(function () {
   // Static coordinates of each visiting location in Ireland.
   const coordinates = [
     {
-      title:    'Dublin',
-      latitude:  53.349805,
-      longitude: -6.260310
+      title:    'National Museum of Ireland',
+      latitude:  53.339881,
+      longitude: -6.253348
     }, {
-      title:     'Galway City',
-      latitude:  53.270668,
-      longitude: -9.056791
+      title:    'St. Patrick\'s Cathedral',
+      latitude:  53.339515,
+      longitude: -6.271455
     }, {
-      title:     'Cliffs of Moher',
-      latitude:  52.971880,
-      longitude: -9.426510
+      title:    'Guinness Storehouse',
+      latitude:  53.341324,
+      longitude: -6.286883
     }, {
-      title:     'Carrick-A-Rede',
-      latitude:  55.239561,
-      longitude: -6.332456
-    }, {
-      title:     'Belfast',
-      latitude:  54.597285,
-      longitude: -5.930120
-    }, {
-      title:     'Giants Causeway',
-      latitude:  55.240807,
-      longitude: -6.511555
-    }, {
-      title:     'Glendalough',
-      latitude:  53.011980,
-      longitude: -6.329840
+      title:     'Redcross',
+      latitude:  52.889731,
+      longitude: -6.145274
     }, {
       title:     'Wicklow Mountains',
       latitude:  53.081805,
@@ -42,6 +30,34 @@ Template.honeymoon.onCreated(function () {
       title:     'Kilkenny',
       latitude:  52.654145,
       longitude: -7.244788
+    }, {
+      title:     'Rock of Cashel',
+      latitude:  52.520089,
+      longitude: -7.890409
+    }, {
+      title:     'Blarney Stone',
+      latitude:  51.929084,
+      longitude: -8.570996
+    }, {
+      title:     'Cliffs of Moher',
+      latitude:  52.971880,
+      longitude: -9.426510
+    }, {
+      title:     'Dunluce Castle',
+      latitude:  55.210674,
+      longitude: -6.579606
+    }, {
+      title:     'Carrick-A-Rede',
+      latitude:  55.239561,
+      longitude: -6.332456
+    }, {
+      title:     'Giant\'s Causeway',
+      latitude:  55.240807,
+      longitude: -6.511555
+    }, {
+      title:     'Belfast',
+      latitude:  54.597285,
+      longitude: -5.930120
     }
   ];
 
@@ -66,40 +82,26 @@ Template.honeymoon.helpers({
   itinerary() {
     return [
       {
-        note: 'Charleston, SC &dash; Dublin, Ireland',
-        date: 'Monday, June 19',
-        list: [
-          'Flight Details:',
-          'Charleston &dash; New York City: Jet Blue',
-          'New York City &dash; Dublin: Aer Lingus'
-        ],
-        description: 'Accommodations provided by a private apartment through Airbnb.'
+        note: 'Charlotte, NC &dash; Dublin, Ireland',
+        date: 'Monday, June 19'
       }, {
-        note: 'Dublin, Ireland: Self-paced exploring',
+        note: 'National Museum of Ireland, St. Patrick\'s Cathedral, and Guinness Storehouse',
         date: 'Tuesday, June 20'
       }, {
-        note: 'Day Tours from Dublin: Kilkenny, Wicklow Mountains, and Glendalough',
-        date: 'Wednesday, June 21',
-        description: 'Enjoy the stunning scenery, flora and fauna as we travel through the countryside and Kilkenny before continuing on to the wild and rugged Wicklow Mountains. Continuing over the mountains, we arrive at the famous heritage site of Glendalough; a glacial valley and medieval monastic settlement which played an important role in the religious and cultural history of Europe.'
+        note: 'Hiking in the Wicklow Mountains',
+        date: 'Wednesday, June 21'
       }, {
-        note: 'Day Tours from Dublin: Giants Causeway, Belfast City, and Carrick-A-Rede Rope Bridge',
+        note: 'Kilkenny, The Rock of Cashel, and The Blarney Stone',
         date: 'Thursday, June 22',
-        description: 'Arriving in Belfast City you will immediately observe how different it will look compared to the city which you departed, Dublin. Belfast was the only city in Ireland which experienced the Industrial Revolution of Britain during the 19<sup>th</sup> century. You choose between the world famous Black Taxi Political Tour or to visit the Titanic Experience and Quarter.'
       }, {
-        note: 'Day Tours from Dublin: Cliffs of Moher, Atlantic Edge Ocean Walk, and Galway City',
+        note: 'Cliffs of Moher',
         date: 'Friday, June 23',
-        description: 'Travel with us to the Cliffs of Moher in County Clare located on Ireland\'s wild rugged Atlantic coast. The cliffs are the highest cliffs in Europe at 214 meters/700 feet high and were recently voted as the seventh most wonderful heritage site in the world, a global poll conducted by UNESCO.'
       }, {
-        note: 'Dublin, Ireland: Self-paced exploring',
+        note: 'Dunluce Castle, Carrick-A-Rede Rope Bridge, and Giant\'s Causeway',
         date: 'Saturday, June 24'
       }, {
-        note: 'Dublin, Ireland &dash; Charleston, SC',
-        date: 'Sunday, June 25',
-        list: [
-          'Flight Details:',
-          'Dublin &dash; New York City: Aer Lingus',
-          'New York City &dash; Charleston: Jet Blue'
-        ]
+        note: 'Dublin, Ireland &dash; Charlotte, NC',
+        date: 'Sunday, June 25'
       }
     ];
   },

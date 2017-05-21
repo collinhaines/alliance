@@ -27,7 +27,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 text-center">
-          <h2 class="honeymoon-itinerary-header">Tentative Itinerary</h2>
+          <h2 class="honeymoon-itinerary-header">Itinerary</h2>
         </div>
       </div>
 
@@ -35,26 +35,14 @@
         <div class="row itinerary-row">
           <div class="col-sm-6 itinerary-row-information">
             <p>
-              <strong>{{{item.note}}}</strong>
-            </p>
-
-            <p>
               <em>{{item.date}}</em>
             </p>
           </div>
 
           <div class="col-sm-6 itinerary-row-description">
-            {{#if item.list}}
-              <ul class="list-unstyled">
-                {{#each entry in item.list}}
-                  <li>{{{entry}}}</li>
-                {{/each}}
-              </ul>
-            {{/if}}
-
-            {{#if item.description}}
-              <p class="text-justify">{{{item.description}}}</p>
-            {{/if}}
+            <p>
+              <strong>{{{item.note}}}</strong>
+            </p>
           </div>
         </div>
       {{/each}}
