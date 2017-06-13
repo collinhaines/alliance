@@ -23,3 +23,4 @@ kadira:blaze-layout          # Layout Manager for Blaze (works well with FlowRou
 kadira:flow-router           # Carefully Designed Client Side Router for Meteor
 dburles:google-maps          # Google Maps Javascript API v3
 dynamic-import
+czbaker:lightbox2
