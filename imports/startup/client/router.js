@@ -24,3 +24,13 @@ FlowRouter.route('/honeymoon', {
     BlazeLayout.render('overlord', { main: 'honeymoon' });
   }
 });
+
+FlowRouter.route('/pictures', {
+  action() {
+    BlazeLayout.render('overlord', { main: 'pictures' });
+  }
+});
+
+FlowRouter.route('/img/engagement/:id', {
+  // Leave blank so Lightbox does not break.
+});

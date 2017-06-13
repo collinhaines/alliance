@@ -1,0 +1,60 @@
+//
+// Pictures
+// ------------------------------
+
+.pictures {
+  background-image: url("img/engagement/IMG_0777.jpg");
+}
+
+.pictures-gallery {
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  background-color: @alliance-blue;
+
+  &-header {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  &-image {
+    height: 175px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    &-link-hover {
+      position: absolute;
+      top: 0;
+      left: 15px;
+
+      height: 100%;
+
+      background-color: rgba(0, 0, 0, 0.4);
+
+      cursor: pointer;
+
+      opacity: 0;
+
+      .transition(0.2s ease-in-out opacity);
+
+      &:hover {
+        opacity: 1;
+      }
+
+      .fa {
+        position: absolute;
+        left: 115.25px;
+        top: 67.5px;
+
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.pictures-trending {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}

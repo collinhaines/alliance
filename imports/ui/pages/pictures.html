@@ -1,0 +1,49 @@
+<template name="pictures">
+  <header class="splash pictures">
+    <div class="splash-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 center-block text-center">
+            <h1 class="splash-header">Happily Haines</h1>
+
+            <!--<h2 class="splash-sub-header"></h2>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="pictures-gallery">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="pictures-gallery-header text-center">Engagement</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        {{#each picture in pictures}}
+          <div class="col-xs-3 pictures-gallery-image">
+            <a href="/img/engagement/{{picture.name}}" class="pictures-gallery-image-link" data-lightbox="portraits">
+              <div class="pictures-gallery-image-link-hover">
+                <i class="fa fa-3x fa-search"></i>
+              </div>
+
+              <img src="/img/engagement-thumb/{{picture.name}}" class="img-responsive" data-margin-top="{{picture.top}}">
+            </a>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <section class="pictures-trending">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <p>#CSquaredHaines</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
