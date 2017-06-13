@@ -55,7 +55,7 @@ Template.home.onRendered(function () {
    * Deal with the countdown plugin.
    */
   $('#countdown').countdown({
-    until:  new Date('2017-06-17T17:00:00-03:00'),
+    until:  new Date('2017-06-17T17:00:00-04:00'),
     format: 'yowdHMS'
   });
 
